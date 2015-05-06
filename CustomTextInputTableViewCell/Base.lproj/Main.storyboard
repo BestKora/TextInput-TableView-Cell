@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomTextInputTableViewCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1Dm-5R-jRk">
+                                <rect key="frame" x="0.0" y="10" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextInputCell" rowHeight="44" id="8QA-cs-jZR" customClass="TextInputTableViewCell" customModule="CustomTextInputTableViewCell" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8QA-cs-jZR" id="WGk-I7-a9c">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZmR-Q8-WG4" userLabel="Round Style Text Field">
+                                                    <rect key="frame" x="8" y="8" width="547" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9e-3L-WJT">
+                                                    <rect key="frame" x="563" y="8" width="29" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="47" id="zNQ-QP-pxR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="zNQ-QP-pxR"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZmR-Q8-WG4" firstAttribute="leading" secondItem="WGk-I7-a9c" secondAttribute="leadingMargin" id="3tN-2P-g7f"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="H9e-3L-WJT" secondAttribute="trailing" id="7Iw-H0-7CL"/>
+                                                <constraint firstItem="ZmR-Q8-WG4" firstAttribute="top" secondItem="WGk-I7-a9c" secondAttribute="topMargin" id="OcL-db-h9A"/>
+                                                <constraint firstItem="H9e-3L-WJT" firstAttribute="bottom" secondItem="WGk-I7-a9c" secondAttribute="bottomMargin" id="TrY-f5-Bnb"/>
+                                                <constraint firstItem="H9e-3L-WJT" firstAttribute="top" secondItem="WGk-I7-a9c" secondAttribute="topMargin" id="ouV-ok-KlN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZmR-Q8-WG4" secondAttribute="trailing" constant="55" id="qBo-4O-r0G"/>
+                                                <constraint firstItem="ZmR-Q8-WG4" firstAttribute="baseline" secondItem="H9e-3L-WJT" secondAttribute="baseline" id="vgg-Hn-hAH"/>
+                                                <constraint firstItem="H9e-3L-WJT" firstAttribute="leading" secondItem="ZmR-Q8-WG4" secondAttribute="trailing" constant="8" symbolic="YES" id="xIa-AA-dvC"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="qBo-4O-r0G"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="ZmR-Q8-WG4" id="rYi-Uw-6bo"/>
+                                            <outlet property="title" destination="H9e-3L-WJT" id="lCJ-E5-DCo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="4Fa-4D-t7L"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PVK-vS-eWO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Dm-5R-jRk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="-20" id="9Oz-3k-sSH"/>
+                            <constraint firstAttribute="centerX" secondItem="1Dm-5R-jRk" secondAttribute="centerX" id="QQ3-1A-spD"/>
+                            <constraint firstAttribute="centerY" secondItem="1Dm-5R-jRk" secondAttribute="centerY" id="TOm-yo-gOp"/>
+                            <constraint firstItem="1Dm-5R-jRk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="rA3-7i-76j"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479" y="435"/>
+        </scene>
+    </scenes>
+</document>
