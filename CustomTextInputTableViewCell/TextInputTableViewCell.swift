@@ -4,7 +4,7 @@ public class TextInputTableViewCell: UITableViewCell {
 	@IBOutlet weak var textField: UITextField!
 	
     @IBOutlet weak var title: UILabel!
-	public func configure(#text: String?, placeholder: String) {
+	public func configure(text text: String?, placeholder: String) {
 		textField.text = text
 		textField.placeholder = placeholder
 		
