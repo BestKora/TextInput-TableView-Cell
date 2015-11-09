@@ -16,7 +16,7 @@ public class ViewController: UIViewController, UITableViewDataSource, UITableVie
 		return cell
 	}
 
-//---------------- клавиатура скрывается (keyboard  DisMiss) начало
+//----------------  клавиатура скрывается (keyboard  DisMiss) начало
     
     override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
